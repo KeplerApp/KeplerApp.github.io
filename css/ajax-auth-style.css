@@ -1,0 +1,48 @@
+form.ajax-auth {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 50px;
+    left:40%;
+    width: 450px;
+    margin-left: -80px;
+    padding: 20px 25px 15px 25px;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.login_overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #F6F6F6;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 94;
+}
+
+@media (max-height: 700px) {
+    form.ajax-auth input {
+        height: 50%;
+        margin-bottom: 10px;
+    }
+    form.ajax-auth {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    form.ajax-auth {
+        margin-left: -130px;
+        top: 90px;
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    form.ajax-auth {
+        margin-left: -130px;
+        top: 90px;
+        width: 250px;
+    }
+}

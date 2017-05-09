@@ -1,0 +1,706 @@
+<!--Design and developed by : kepler team (Shailesh kumar) 27/03/2017-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>Profile</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+	<link rel="stylesheet" href="css/ajax-auth-style.css">
+    
+	<!-- <link href="css/compiled.min1c9b.css" rel="stylesheet"> -->
+
+    <!-- Material Design Bootstrap -->
+    <link href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.3.2" rel="stylesheet">
+
+	<!-- <link href="css/compiled.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+     -->
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+<style>
+	.modal-backdrop{
+	opacity:0.1;
+}
+#hover-content {
+	display: none;
+}
+
+#parent:hover+#hover-content {
+	display: block;
+	z-index: 6;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 140px;
+	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px
+		rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+	padding: 12px 16px;
+}
+
+</style>
+</head>
+
+<body>	
+<form id="liker" class="ajax-auth modal_responsive_width" style="padding:3% 1%;height:400px;overflow-y:auto">
+	<h5 class="text-center">People who <i class="fa fa-heart"></i> this post</h5>	
+	 <div class="list-group-item-action flex-column align-items-start"> 
+		<div class="col-xs-2">	
+			<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+		</div>
+		<div class="col-xs-10 liker_list">
+			<div class="d-flex w-100 justify-content-between">
+				<a href="#" class="card-title profile_name">Shailesh kumar</a>
+				<small>3 days ago</small>
+			</div>
+		</div>
+		<div class="col-xs-2">	
+			<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+		</div>
+		<div class="col-xs-10 liker_list">
+			<div class="d-flex w-100 justify-content-between">
+				<a href="#" class="card-title profile_name">Shailesh kumar</a>
+				<small>3 days ago</small>
+			</div>
+		</div>
+		<div class="col-xs-2">	
+			<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+		</div>
+		<div class="col-xs-10 liker_list">
+			<div class="d-flex w-100 justify-content-between">
+				<a href="#" class="card-title profile_name">Shailesh kumar</a>
+				<small>3 days ago</small>
+			</div>
+		</div>
+		<div class="col-xs-2">	
+			<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+		</div>
+		<div class="col-xs-10 liker_list">
+			<div class="d-flex w-100 justify-content-between">
+				<a href="#" class="card-title profile_name">Shailesh kumar</a>
+				<small>3 days ago</small>
+			</div>
+		</div>
+		<div class="col-xs-2">	
+			<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+		</div>
+		<div class="col-xs-10 liker_list">
+			<div class="d-flex w-100 justify-content-between">
+				<a href="#" class="card-title profile_name">Shailesh kumar</a>
+				<small>3 days ago</small>
+			</div>
+		</div>
+		<div class="col-xs-2">	
+			<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+		</div>
+		<div class="col-xs-10 liker_list">
+			<div class="d-flex w-100 justify-content-between">
+				<a href="#" class="card-title profile_name">Shailesh kumar</a>
+				<small>3 days ago</small>
+			</div>
+		</div>
+		
+	  </div>
+</form>
+
+<form id="login" class="ajax-auth modal_responsive_width">
+	<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button> -->
+    <div class="col-xs-2">	
+		<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+	</div>
+	<div class="col-xs-10">
+			<a href="profile.html" class="card-title profile_name">Anand Prakash Gautam</a>
+			<span>shared</span>
+			<a href="profile.html" class="card-title profile_name">shailesh kumar</a>
+			<span>post on his timeline.</span>
+	</div>
+	<br/><br/><br/><br/>
+	<input type="text" placeholder="Share something!!!" class="text_type"/>
+		
+		<!-- sharing material start -->
+		
+		<div class="card card-cascade narrower">
+					<!--Card content-->
+					<div class="card-block">
+						<!--Title-->
+						<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;float:left;">
+						<a href="profile.html" class="card-title profile_name">Shailesh kumar</a>
+						<span class="timespan">4hrs ago</span><span class="point">.</span><span class="timespan">Delhi</span>
+						<br/></br>
+						<!--Text-->
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						
+					</div>
+					<!--/.Card content-->
+					<!--Card image-->
+					<div class="view overlay">
+						<img src="img/img-7.jpg" class="img-fluid" alt="">
+					</div>	
+					<!--/.Card image-->
+				  </div>
+		<!-- sharing material ends -->
+	<button type="button" class="btn-primary btn_post right"><i class="fa fa-share-square-o"></i><span style="padding: 0px 11px;">Share</span></button>
+
+</form>	
+ <header>
+        <!-- Sidebar navigation -->
+        <ul id="slide-out" class="side-nav fixed sn-bg-1 custom-scrollbar">
+            <!-- Dp -->
+            <li>
+                <div class="avatar center"><img src="img/spider.jpg" class="rounded-circle img-responsive">
+					</div>
+            </li>
+            <!--/ Dp -->
+            <!--profile name-->
+            <li>
+                <h4><a href="profile.html" class="avatar_detail">Anand Prakash Gautam</a></h4>
+            </li>
+            
+            <!-- Side navigation links -->
+            <li>
+                <ul class="collapsible collapsible-accordion">
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-user"></i> Profile </a>
+                       <!--  <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">Submit listing</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Registration form</a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </li>
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-comment-o"></i> Message</a>
+                        <!-- <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">For bloggers</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">For authors</a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </li>
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope"></i> Feedback</a>
+                    </li>
+                    <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-sign-out"></i> logout</a>
+                        <!-- <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">FAQ</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Write a message</a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </li>
+                </ul>
+            </li>
+            <!--/. Side navigation links -->
+            <div class="sidenav-bg mask-strong"></div>
+        </ul>
+        <!--/. Sidebar navigation -->
+
+        <!-- Navbar -->
+      <nav class="navbar fixed-top navbar-toggleable-md navbar-dark theme_color scrolling-navbar double-nav">
+				<button class="navbar-toggler navbar-toggler-right button-collapse collapsed sidenav_view" type="button" data-activates="slide-out"  aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon "></span>
+                </button>
+            <!-- <div class="float-xs-left">
+                <a href="#" data-activates="slide-out" class="button-collapse">
+				<i class="fa fa-bars"></i></a>
+            </div> -->
+           
+            <div class="col-md-2 breadcrumb-dn mr-auto">
+                
+				<a class="navbar-brand" href="#" style="margin-top:-22px;">
+				   <img src="img/kepler_footer.png" class="d-inline-block align-top text-center" height="70px" alt="Kepler">
+				</a>
+			
+            </div>
+			<div class="col-md-4 nav-item">
+                    <!-- <input list="suggestions" type="text" name="search" class="search_box" placeholder="Search..">
+					-->
+				<div class="md-form" style="margin-bottom:0px">
+					<input type="search" id="form-autocomplete" class="form-control mdb-autocomplete white-text">
+					<button class="mdb-autocomplete-clear">
+						<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="https://www.w3.org/2000/svg">
+							<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+							<path d="M0 0h24v24H0z" fill="none" />
+						</svg>
+					</button>
+					<label for="form-autocomplete" class="active white-text">Search People</label>
+				</div>	
+			</div>
+            <ul class="col-md-4 nav navbar-nav ml-auto flex-row">
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-home"></i> <span class="hidden-sm-down">Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-envelope-o"></i> <span class="hidden-sm-down">Message</span></a>
+                </li>
+                <li class="nav-item">
+                    <a data-toggle="modal" data-target="#centralModalInfo" class="nav-link"><i class="fa fa-bell"></i><span class="hidden-sm-down">Notification</span></a>
+                </li>
+				<li class="nav-item avatar dropdown mobile_view">
+                 <a class="nav-link dropdown-toggle waves-effect waves-light" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/spider.jpg" class="img-fluid rounded-circle z-depth-0"></a>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item waves-effect waves-light" href="#">Privacy</a>
+                                        <a class="dropdown-item waves-effect waves-light" href="#">Settings</a>
+                                        <a class="dropdown-item waves-effect waves-light" href="#">Logout</a>
+                                    </div>                                       
+                 </li>  
+            </ul>
+        </nav> 
+        <!-- /.Navbar -->
+    </header>
+<div class="container">
+      <div class="row top">
+		<div class="col-md-3 mobile_view">  
+			<div class="float-left card testimonial-card card_panel">
+					<!--Bacground color-->
+					<div class="card-up wallpaper">
+					</div>
+				<!--Avatar-->
+					<div class="avatar">
+						<img src="img/spider.jpg" class="rounded-circle img-responsive">
+					</div>
+
+					<div class="card_block">
+				<!--Name-->
+						<h4 class="card-title"><a>Anand Prakash Gautam</a></h4>
+					<hr>
+					</div>
+					<div class="profile_detail">
+				<!--Title-->
+							<p class="card-text">Anand is an android designer living in New York.</p>
+							<hr>
+							<a class="card-meta"><i class="fa fa-user"></i>83 Followers</a>
+							<p class="card-meta right">Joined in April,2017</p>
+						</div>
+				</div>
+		 </div>
+		 <div class="col-md-9">
+			 <ul class="float-left nav nav-tabs md-pills pills-default" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#panel11" role="tab"><i class="fa fa-user fa-2x"></i><br> Profile</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#panel12" role="tab"><i class="fa fa-heart fa-2x"></i><br> Follow</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#panel13" role="tab"><i class="fa fa-check fa-2x"></i><br> Following</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#panel14" role="tab"><i class="fa fa-envelope fa-2x"></i><br> My Post</a>
+				</li>
+		</ul>
+	<div class="col-md-8 tab-content">
+	<!-- profile section detail -->
+	   <div class="tab-pane fade in show active" id="panel11" role="tabpanel">
+		  <div class="card card-cascade narrower">
+					<!--Card content-->
+					<div class="card-block">
+						<!--Title-->
+						<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;float:left;">
+						&nbsp;
+						<a href="#" class="card-title profile_name">Anand Prakash Gautam</a>
+						<span class="timespan">4hrs ago</span><span class="point">.</span><span class="timespan">Delhi</span>
+						<a data-toggle="modal" data-target="#frameModalBottom" class="btn-floating toggle-action right"><i class="fa fa-chevron-down black-text toggle_icon"></i></a>
+						<br/></br>
+						
+						<!--Text-->
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						
+					</div>
+					<!--/.Card content-->
+					<!--Card image-->
+					<div class="view overlay">
+						<img src="img/img-7.jpg" class="img-fluid" alt="">
+					</div>	
+					<div class="card-block-activity">
+						<div class="activity">
+							<!-- like -->
+							<a class="icons"><i class="fa fa-heart-o" data-toggle="tooltip" data-placement="bottom" title="like"></i></a>
+							<span class="timespan"><a href="#" id="show_liker">21</a></span>
+						</div>
+						<div class="activity">
+								<!--comment-->
+							<span data-toggle="tooltip" data-placement="bottom" title="comment"><a class="icons"><i class="fa fa-comment-o" data-toggle="collapse" data-target="#collapseExample"></i></a></span>
+							<span class="timespan">21</span>
+						</div>
+						<div class="activity">
+						<!--share-->
+						<a class="icons popup-text" href="#" id="show_login">
+						  <i class="fa fa-share-square-o" data-toggle="tooltip" data-placement="bottom" title="share"></i>
+						</a>
+						<span class="timespan">21</span>
+						</div>
+						<div class="col-xs-2">	
+								<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+							</div>
+							<div class="col-xs-10">	
+								<input type="text" placeholder="write a comment..." data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+							</div>
+							<hr>
+					</div>
+					
+					<div class="collapse" id="collapseExample" style="margin-top:20%;">
+								<div class="list-group-item-action flex-column align-items-start">
+										<div class="col-xs-2">	
+											<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+										</div>
+										<div class="col-xs-10">
+											<div class="d-flex w-100 justify-content-between">
+												<a href="#" class="card-title profile_name">Shailesh kumar</a>
+												<small>3 days ago</small>
+											</div>
+											<p class="mb-1 justify">chl be chl chl be chl chl be chl chl be chl chl be chl chl be chl!!!...</p>
+											<hr>
+										</div>
+								
+										<div class="col-xs-2">	
+											<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+										</div>
+										<div class="col-xs-10">
+											<div class="d-flex w-100 justify-content-between">
+												<a href="#" class="card-title profile_name">Shailesh kumar</a>
+												<small>3 days ago</small>
+											</div>
+											<p class="mb-1 justify">chl be chl chl be chl chl be chl chl be chl chl be chl chl be chl!!!...</p>
+											<hr>
+										</div>
+									</div> 
+								
+							</div>	
+					<!--/.Card image-->
+				  </div>				 
+			   </div>
+	<!-- follow section detail -->			   
+			<div class="tab-pane fade" id="panel12" role="tabpanel">
+				 <div class="card card-block"> 
+				 <div class="media mb-1">
+					<a class="media-left waves-light">
+						<img class="" src="img/spider.jpg" alt="Generic placeholder image">
+					</a>
+					<div class="media-body">
+						<a href="#" class="card-title profile_name">Anand Prakash Gautam</a>
+						<button class="theme_color btn_post toggle-action right">
+							<i class="fa fa-plus" data-toggle="tooltip" data-placement="right" title="Follow"></i>
+						</button>
+						<!-- <a class="btn-floating toggle-action right"><i class="fa fa-plus black-text toggle_icon"></i></a> -->
+						<p class="timespan">Follower<span class="point">.</span><span class="timespan">200</span>
+						<br/><span class="timespan">Delhi</span></p>
+					</div>
+				  </div>
+				</div>
+			</div>
+  <!-- following section detail -->
+			<div class="tab-pane fade" id="panel13" role="tabpanel">
+				<div class="card card-block"> 
+				 <div class="media mb-1">
+					<a class="media-left waves-light">
+						<img class="" src="img/spider.jpg" alt="Generic placeholder image">
+					</a>
+					<div class="media-body">
+						<a href="#" class="card-title profile_name">Anand Prakash Gautam</a>
+						<button class="theme_color btn_post toggle-action right">
+							<i class="fa fa-check" data-toggle="tooltip" data-placement="right" title="Followed"></i>
+						</button>
+						<!-- <a class="btn-floating toggle-action right"><i class="fa fa-plus black-text toggle_icon"></i></a> -->
+						<p class="timespan">Follower<span class="point">.</span><span class="timespan">200</span>
+						<br/><span class="timespan">Delhi</span></p>
+					</div>
+				  </div>
+				</div>
+			</div>
+  <!-- My post section detail -->
+			<div class="tab-pane fade" id="panel14" role="tabpanel">
+				<div class="card card-cascade narrower">
+					<!--Card content-->
+					<div class="card-block">
+						<!--Title-->
+						<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;float:left;">
+						&nbsp;
+						<a href="#" class="card-title profile_name">Anand Prakash Gautam</a>
+						<span class="timespan">4hrs ago</span><span class="point">.</span><span class="timespan">Delhi</span>
+						<a data-toggle="modal" data-target="#frameModalBottom" class="btn-floating toggle-action right"><i class="fa fa-chevron-down black-text toggle_icon"></i></a>
+						<br/></br>
+						
+						<!--Text-->
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						
+					</div>
+					<!--/.Card content-->
+					<!--Card image-->
+					<div class="view overlay">
+						<img src="img/img-7.jpg" class="img-fluid" alt="">
+					</div>	
+					<div class="card-block-activity">
+						<div class="activity">
+							<!-- like -->
+							<a class="icons"><i class="fa fa-heart-o" data-toggle="tooltip" data-placement="bottom" title="like"></i></a>
+							<span class="timespan"><a href="#" id="show_liker">21</a></span>
+						</div>
+						<div class="activity">
+								<!--comment-->
+							<span data-toggle="tooltip" data-placement="bottom" title="comment"><a class="icons"><i class="fa fa-comment-o" data-toggle="collapse" data-target="#collapseExample"></i></a></span>
+							<span class="timespan">21</span>
+						</div>
+						<div class="activity">
+						<!--share-->
+						<a class="icons popup-text" href="#" id="show_login">
+						  <i class="fa fa-share-square-o" data-toggle="tooltip" data-placement="bottom" title="share"></i>
+						</a>
+						<span class="timespan">21</span>
+						</div>
+						<div class="col-xs-2">	
+								<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+							</div>
+							<div class="col-xs-10">	
+								<input type="text" placeholder="write a comment..." data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+							</div>
+							<hr>
+					</div>
+					
+					<div class="collapse" id="collapseExample" style="margin-top:20%;">
+								<div class="list-group-item-action flex-column align-items-start">
+										<div class="col-xs-2">	
+											<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+										</div>
+										<div class="col-xs-10">
+											<div class="d-flex w-100 justify-content-between">
+												<a href="#" class="card-title profile_name">Shailesh kumar</a>
+												<small>3 days ago</small>
+											</div>
+											<p class="mb-1 justify">chl be chl chl be chl chl be chl chl be chl chl be chl chl be chl!!!...</p>
+											<hr>
+										</div>
+								
+										<div class="col-xs-2">	
+											<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+										</div>
+										<div class="col-xs-10">
+											<div class="d-flex w-100 justify-content-between">
+												<a href="#" class="card-title profile_name">Shailesh kumar</a>
+												<small>3 days ago</small>
+											</div>
+											<p class="mb-1 justify">chl be chl chl be chl chl be chl chl be chl chl be chl chl be chl!!!...</p>
+											<hr>
+										</div>
+									</div> 
+								
+							</div>	
+					<!--/.Card image-->
+				  </div>				 
+			   </div>
+  <!-- All section ends -->
+  
+			</div>			
+		</div>	
+	</div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
+            </div>
+            <!--Body-->
+            <div class="modal-body">
+                ...
+            </div>
+            <!--Footer-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!-- post poup start -->
+<div class="modal fadeIn" id="postmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+                <div class="col-md-2 col-sm-2 col-xs-2">	
+					<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+				</div>
+				<div class="col-md-10 col-sm-10 col-xs-10">	
+					<textarea rows="6" cols="50" placeholder="what's happening?" style="height:100px" length="40"></textarea>
+				</div>
+				<div class="row">
+					<div class="col-md-5 media">	
+						<a><i class="fa fa-camera media_type"></i></a>
+						<a><i class="fa fa-map-marker media_type"></i></a>
+					</div>
+					<div class="col-md-3">
+						<button type="button" class="btn-primary btn_post"><i class="fa fa-pencil-square-o"></i><span style="padding: 0px 11px;">Post</span></button>
+					</div>
+				</div>				
+            </div>
+        </div>
+        <!--/.Content-->
+    </div>
+</div>
+<!-- post popup ending -->
+<!-- Central Modal Medium Info -->
+<div class="modal fade right modal_bg_opacity" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-full-height modal-right" role="document">
+        <!--Content-->
+        <div class="modal-content" style="height:800px;overflow-y:auto;">
+            <!--Header-->
+            <div class="modal-header">
+                <p class="heading lead"><i class="fa fa-bell"></i>Notification</p>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="white-text">&times;</span>
+                </button>
+            </div>
+
+            <!--Body-->
+            <ul class="flex-column align-items-start"> 
+				  <li class="boxing_model"> 
+					 <a>	 
+						 <div class="col-md-2 col-sm-2 col-xs-2">	
+							<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+						 </div>
+						 <div class="col-md-10 col-sm-10 col-xs-10">
+							<div class="d-flex w-100 justify-content-between">
+								<p class="mb-1">Shailesh kumar starts following you ghg.Shailesh kumar starts following you ghg</p>
+								<small>just now</small>
+							</div>
+						 </div>
+					 </a>
+				  </li>
+<li class="boxing_model"> 
+					 <a>	 
+						 <div class="col-md-2 col-sm-2 col-xs-2">	
+							<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+						 </div>
+						 <div class="col-md-10 col-sm-10 col-xs-10">
+							<div class="d-flex w-100 justify-content-between">
+								<p class="mb-1">Shailesh kumar starts following you ghg.Shailesh kumar starts following you ghg</p>
+								<small>just now</small>
+							</div>
+						 </div>
+					 </a>
+				  </li>
+<li class="boxing_model"> 
+					 <a>	 
+						 <div class="col-md-2 col-sm-2 col-xs-2">	
+							<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+						 </div>
+						 <div class="col-md-10 col-sm-10 col-xs-10">
+							<div class="d-flex w-100 justify-content-between">
+								<p class="mb-1">Shailesh kumar starts following you ghg.Shailesh kumar starts following you ghg</p>
+								<small>just now</small>
+							</div>
+						 </div>
+					 </a>
+				  </li>
+<li class="boxing_model"> 
+					 <a>	 
+						 <div class="col-md-2 col-sm-2 col-xs-2">	
+							<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
+						 </div>
+						 <div class="col-md-10 col-sm-10 col-xs-10">
+							<div class="d-flex w-100 justify-content-between">
+								<p class="mb-1">Shailesh kumar starts following you ghg.Shailesh kumar starts following you ghg</p>
+								<small>just now</small>
+							</div>
+						 </div>
+					 </a>
+				  </li>				  
+			</ul>
+        </div>
+        <!--/.Content-->
+     </div>
+  </div>
+<!-- Central Modal Medium Info-->
+
+<!-- bottom mode section start-->
+<div class="modal fade bottom modal_bg_opacity" id="frameModalBottom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-frame modal-bottom" role="document">
+		<!--Content-->
+        <div class="modal-content modal_option">
+            <!--Body-->
+            <div class="modal-body">
+			    <ul class="float-left nav nav-tabs md-pills pills-default" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#panel11" role="tab"><i class="fa fa-envelope fa-2x mb-1 animated rotateIn"></i><br> Save</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#panel11" role="tab"><i class="fa fa-pencil-square-o fa-2x mb-1 animated rotateIn"></i><br> Edit</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#panel11" role="tab"><i class="fa fa-trash-o fa-2x mb-1 animated rotateIn"></i><br> Delete</a>
+					</li>
+				</ul>
+            </div>
+        </div>
+	</div>
+</div>
+<!--/Start your project here-->
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+ <script type="text/javascript" src="js/compiled.min324d.js"></script>
+	<script type='text/javascript' src='https://mdbootstrap.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+
+
+	<script type="text/javascript" src="js/bootstrap.js"></script>	
+	<script src="js/jqueryb8ff.js"></script> 
+	<script type='text/javascript' src='https://mdbootstrap.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+	<script src="js/ajax-auth-script.js"></script> 
+	<script type="text/javascript" src="js/tweetie.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+	
+	
+	
+	<script>
+	$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+	$(".button-collapse").sideNav();
+        
+    var el = document.querySelector('.custom-scrollbar');
+    Ps.initialize(el);
+   	
+	</script>
+	<script>
+    var users = [
+        "Shailesh",
+        "Sunil",
+		"Jadoo",
+		"Anand",
+		"Ujjwal"
+    ];
+
+    $('.mdb-autocomplete').mdb_autocomplete({
+        data: users
+    });
+    </script>
+
+
+</body>
+
+			   
