@@ -263,7 +263,7 @@
         <!-- /.Navbar -->
  </header>
 <div class="container">
-      <div class="row" style="margin:auto;">	
+      <div class="row">	
 			<div class="col-md-12 col-xs-11 card hovercard user_wall">
 				<div class="align-self-center card-background testimonial-card" style="margin-top: auto;">
 					<div class="avatar">
@@ -323,7 +323,7 @@
 					</div>
 	           </div>
 			 </div>
-		<div class="col-md-9 mobile_view_top">
+		<div class="col-md-9">
 			  <div class="col-md-8 col-sm-8 col-xs-8">
 				<div class="tab-content">
 				<!--Panel 1-->
@@ -463,7 +463,7 @@
 </div>
 <!-- Central Modal Medium Info -->
 <div class="modal fade right modal_bg_opacity" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-full-height modal-right" role="document">
+    <div class="modal-dialog modal-full-height modal-right notification_width" role="document">
         <!--Content-->
         <div class="modal-content" style="height:800px;overflow-y:auto;">
             <!--Header-->
@@ -609,15 +609,15 @@
         topSpacing: 90
         , zIndex: 2
         , stopper: "#YourStopperId"
-    });
-});
+		});
+	});
 
 	var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar' ),
 		didScroll = false,
-		changeHeaderOn = 200;
+		changeHeaderOn = 300;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -627,6 +627,7 @@
 			}
 		}, false );
 	}
+
 	function scrollPage() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
@@ -644,7 +645,94 @@
 
 	init();
 
-})();
+})();        
+
+
+
+
+
+
+/*!
+ * classie - class helper functions
+ * from bonzo https://github.com/ded/bonzo
+ * 
+ * classie.has( elem, 'my-class' ) -> true/false
+ * classie.add( elem, 'my-new-class' )
+ * classie.remove( elem, 'my-unwanted-class' )
+ * classie.toggle( elem, 'my-class' )
+ */
+
+/*jshint browser: true, strict: true, undef: true */
+/*global define: false */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+  hasClass = function( elem, c ) {
+    return elem.classList.contains( c );
+  };
+  addClass = function( elem, c ) {
+    elem.classList.add( c );
+  };
+  removeClass = function( elem, c ) {
+    elem.classList.remove( c );
+  };
+}
+else {
+  hasClass = function( elem, c ) {
+    return classReg( c ).test( elem.className );
+  };
+  addClass = function( elem, c ) {
+    if ( !hasClass( elem, c ) ) {
+      elem.className = elem.className + ' ' + c;
+    }
+  };
+  removeClass = function( elem, c ) {
+    elem.className = elem.className.replace( classReg( c ), ' ' );
+  };
+}
+
+function toggleClass( elem, c ) {
+  var fn = hasClass( elem, c ) ? removeClass : addClass;
+  fn( elem, c );
+}
+
+var classie = {
+  // full names
+  hasClass: hasClass,
+  addClass: addClass,
+  removeClass: removeClass,
+  toggleClass: toggleClass,
+  // short names
+  has: hasClass,
+  add: addClass,
+  remove: removeClass,
+  toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+  // AMD
+  define( classie );
+} else {
+  // browser global
+  window.classie = classie;
+}
+
+})( window );    
+
 
     </script>
 
