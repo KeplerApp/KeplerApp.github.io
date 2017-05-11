@@ -17,7 +17,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
 	<link rel="stylesheet" href="css/ajax-auth-style.css">
-    
 	<!-- <link href="css/compiled.min1c9b.css" rel="stylesheet"> -->
 
     <!-- Material Design Bootstrap -->
@@ -267,8 +266,10 @@
 			<div class="col-md-12 col-xs-11 card hovercard user_wall">
 				<div class="align-self-center card-background testimonial-card" style="margin-top: auto;">
 					<div class="avatar">
-						<img src="img/spider.jpg" class="rounded-circle img-responsive">
+						<img id="myImg" src="img/spider.jpg" class="rounded-circle img-responsive">
+						<!-- <img src="img/spider.jpg" class="rounded-circle img-responsive"> -->
 					</div>
+					
 					<div class="card_block">
 				<!--Name-->
 						<h4 class="white-text"><a>Anand Prakash Gautam</a></h4>
@@ -291,36 +292,53 @@
 				</li>
 		</ul>
 		<!-- Tab panels -->
-	<div class="row top">
+	<div class="row" style="margin-top: 1%;">
 		<div class="col-md-3 mobile_view">
-			<div class="card testimonial-card card_panel">
-					<!--Bacground color-->
-					<div class="card-up wallpaper">
-					</div>
-
-					<!--Avatar-->
-					<div class="avatar"><img src="img/spider.jpg" class="rounded-circle img-responsive">
-					</div>
-
-					<div class="card_block">
-						<!--Name-->
-						<h4 class="card-title"><a href="profile.html">Anand Prakash Gautam</a></h4>
-						<hr>
-					</div>
-					<div class="card_detail">
-						<div class="col-md-3 col-sm-4 col-xs-4">
-							<h5>Post</h5>	
-							<a class="counts">6</a>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4">
-							<h5>Follower</h5>
-							<a class="counts">6</a>
-						</div>
-						<div class="col-md-4 col-sm-4 col-xs-4">
-							<h5>Following</h5>
-							<a class="counts">6</a>
-						</div>
-					</div>
+			<div class="testimonial-card card_panel">
+					<ul class="list-group white">
+						<li class="profile-details justify-content-between right">
+							<div class="d-flex justify-content-end">
+							  <div class="mr-auto p-2">
+								<span class="badge badge-primary badge-pill"><i class="fa fa-birthday-cake"></i></span>
+							  </div>
+							  <div class="p-2">4 April,1995</div>
+							</div>
+						</li>
+						<li class="profile-details justify-content-between">
+							<div class="d-flex justify-content-end">
+							  <div class="mr-auto p-2">
+								<span class="badge badge-primary badge-pill"><i class="fa fa-transgender-alt"></i></span>
+							</div>
+							  <div class="p-2">Female</div>
+							</div>
+						</li>
+						<li class="profile-details justify-content-between">
+							<div class="d-flex justify-content-end">
+							  <div class="mr-auto p-2">
+								<span class="badge badge-primary badge-pill"><i class="fa fa-envelope-o"></i></span>
+							</div>
+							  <div class="p-2">anandgautam51@gmail.com</div>
+							</div>
+						</li>
+						<li class="profile-details justify-content-between">
+							<div class="d-flex justify-content-end">
+							  <div class="mr-auto p-2">
+								<span class="badge badge-primary badge-pill"><i class="fa fa-clock-o"></i></span>
+							  </div>
+							  <div class="p-2">27 April,2017</div>
+							</div>
+						</li>
+						<li class="profile-details justify-content-between">
+							<div class="d-flex justify-content-end">
+							  <div class="mr-auto p-2">
+								<span class="badge badge-primary badge-pill"><i class="fa fa-map-marker"></i></span>
+							</div>
+							<div class="p-2">Badarpur</div>
+							</div>
+							
+							
+						</li>
+					</ul>
 	           </div>
 			 </div>
 		<div class="col-md-9">
@@ -328,8 +346,7 @@
 				<div class="tab-content">
 				<!--Panel 1-->
 				<div class="tab-pane fade in show active" id="panel1" role="tabpanel">
-					<br>
-				<div class="card card-cascade narrower">
+					<div class="card card-cascade">
 					<!--Card content-->
 					<div class="card-block">
 						<!--Title-->
@@ -410,14 +427,46 @@
 			<!--/.Panel 1-->
 			<!--Panel 2-->
 			<div class="tab-pane fade" id="panel2" role="tabpanel">
-				<br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
+			 <div class="card card-cascade">
+				   <div class="card-block"> 
+					   
+						<a class="media-left waves-light">
+							<img class="" src="img/spider.jpg" alt="Generic placeholder image">
+						</a>
+						<div class="media-body">
+							<a href="#" class="card-title profile_name">Anand Prakash Gautam</a>
+							<button class="theme_color btn_post toggle-action right">
+								<i class="fa fa-plus" data-toggle="tooltip" data-placement="right" title="Follow"></i>
+							</button>
+							<!-- <a class="btn-floating toggle-action right"><i class="fa fa-plus black-text toggle_icon"></i></a> -->
+							<p class="timespan">Follower<span class="point">.</span><span class="timespan">200</span>
+							<br/><span class="timespan">Delhi</span></p>
+						</div>
+					   
+				   </div>
+				</div>
 			</div>
 			<!--/.Panel 2-->
 			<!--Panel 3-->
 			<div class="tab-pane fade" id="panel3" role="tabpanel">
-				<br>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate odit minima.</p>
+				<div class="card card-cascade">
+				   <div class="card-block"> 
+					   
+						<a class="media-left waves-light">
+							<img class="" src="img/spider.jpg" alt="Generic placeholder image">
+						</a>
+						<div class="media-body">
+							<a href="#" class="card-title profile_name">Anand Prakash Gautam</a>
+							<button class="theme_color btn_post toggle-action right">
+								<i class="fa fa-plus" data-toggle="tooltip" data-placement="right" title="Follow"></i>
+							</button>
+							<!-- <a class="btn-floating toggle-action right"><i class="fa fa-plus black-text toggle_icon"></i></a> -->
+							<p class="timespan">Follower<span class="point">.</span><span class="timespan">200</span>
+							<br/><span class="timespan">Delhi</span></p>
+						</div>
+					   
+				   </div>
+				</div>
 			</div>
 			<!--/.Panel 3-->
 			<!--Panel 4-->
@@ -428,10 +477,10 @@
 			<!--/.Panel 4-->
 		  </div>
 	   </div>
-		<div class="col-md-4 col-sm-4 col-xs-4 mobile_view sticky">
+		<div class="col-md-4 col-sm-4 col-xs-4 mobile_view">
 					<div class="card card-cascade">
 						<!--Avatar-->
-						<h5 class="card-title text-center">You can Follow:</h5>
+						<h5 class="card-title text-center">People you may know:</h5>
 							<ul class="">
 							<li>
 							<div class="col-md-3 col-sm-3 col-xs-3">	
@@ -558,6 +607,12 @@
         </div>
 	</div>
 </div>
+<!-- The Modal -->
+					<div id="myModal" class="img-modal">
+					  <span class="closed">&times;</span>
+					  <img class="img-modal-content" id="img01">
+					  <div id="caption"></div>
+					</div>
 	
 	
 	
@@ -608,8 +663,7 @@
     $(".sticky").sticky({
         topSpacing: 90
         , zIndex: 2
-        , stopper: "#YourStopperId"
-		});
+        });
 	});
 
 	var cbpAnimatedHeader = (function() {
@@ -617,7 +671,7 @@
 	var docElem = document.documentElement,
 		header = document.querySelector( '.navbar' ),
 		didScroll = false,
-		changeHeaderOn = 300;
+		changeHeaderOn = 250;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -647,36 +701,14 @@
 
 })();        
 
-
-
-
-
-
-/*!
- * classie - class helper functions
- * from bonzo https://github.com/ded/bonzo
- * 
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
- */
-
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false */
-
 ( function( window ) {
 
 'use strict';
-
-// class helper functions from bonzo https://github.com/ded/bonzo
 
 function classReg( className ) {
   return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
 }
 
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
 var hasClass, addClass, removeClass;
 
 if ( 'classList' in document.documentElement ) {
@@ -731,9 +763,28 @@ if ( typeof define === 'function' && define.amd ) {
   window.classie = classie;
 }
 
-})( window );    
+})( window ); 
 
+// Get the image and insert it inside the modal - use its "alt" text as a caption
 
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closed")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}   
     </script>
 
 
