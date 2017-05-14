@@ -51,7 +51,13 @@
 			}			
 .toggle_nav{
 			/* display:none; */
-			}			
+			}
+.nav>li>a:hover {
+		background:rgb(81, 173, 197) !important;
+		}
+.cursive{
+	font-family:cursive;
+	}			
 			
 .profile{
 	border-radius:6px;
@@ -72,6 +78,9 @@
 		}	
 .avatar_detail:hover{	
 		color:#ffffff !important;
+		}
+.img-width{
+		max-width:none !important;
 		}		
 .profile_detail{
 				font-size:15px;
@@ -197,6 +206,7 @@
 			font-size:2em;
 			color:#2599b6;
 			}
+			
 body{
 		background:#f5f8fa;
 		}
@@ -218,12 +228,14 @@ body{
 		margin-bottom: -10px !important;
 		}	
 .user_wall{
-			background-image:url('../img/cool-background.jpg') ;
+			/* background-image:url('../img/janpath.jpg') ;
 			background-repeat: no-repeat;
-			background-size:cover;
-			height:325px;
+			background-size:cover; */
+			height:400px;
+			background:rgba(0, 0, 0, 0.44);
+			padding:initial;
 			}	
-
+			
 		
 /* .justify-content-between {
     -webkit-box-pack: justify!important;
@@ -279,6 +291,12 @@ body{
 		}	
 .notification_width{
 			width:335px !important;
+			}	
+.reponsive_width{
+		max-width:none !important;
+		}
+.sidenav_btn{
+			left:none !important;
 			}		
 }
 /* 	navigation bar styling*/
