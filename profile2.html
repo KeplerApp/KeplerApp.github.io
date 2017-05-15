@@ -210,24 +210,15 @@
 
         <!-- Navbar -->
       <nav class="navbar fixed-top navbar-toggleable-md navbar-dark scrolling-navbar double-nav">
-				<button class="navbar-toggler navbar-toggler-right button-collapse collapsed sidenav_view sidenav_btn" type="button" data-activates="slide-out" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler navbar-toggler-right button-collapse collapsed sidenav_view" type="button" data-activates="slide-out" aria-controls="navbarNav4" aria-expanded="false" aria-label="Toggle navigation" style="left: initial;">
                       <span class="navbar-toggler-icon"></span>
                 </button>
-            <!-- <div class="float-xs-left">
-                <a href="#" data-activates="slide-out" class="button-collapse">
-				<i class="fa fa-bars"></i></a>
-            </div> -->
-           
-            <div class="col-md-2 breadcrumb-dn mr-auto">
-                
-				<a class="navbar-brand" href="#" style="margin-top:-22px;">
+         <div class="col-md-2 breadcrumb-dn mr-auto">
+               <a class="navbar-brand" href="#" style="margin-top:-22px;">
 				   <img src="img/kepler_footer.png" class="d-inline-block align-top text-center" height="70px" alt="Kepler">
 				</a>
-			
-            </div>
+			</div>
 			<div class="col-md-4 nav-item">
-                    <!-- <input list="suggestions" type="text" name="search" class="search_box" placeholder="Search..">
-					-->
 				<div class="md-form" style="margin-bottom:0px">
 					<input type="search" id="form-autocomplete" class="form-control mdb-autocomplete white-text">
 					<button class="mdb-autocomplete-clear">
@@ -275,9 +266,7 @@
 					</div>
 					<div class="white-text d-flex justify-content-center">
 						<i class="fa fa-quote-left"></i>
-						&nbsp;
 							<p class="cursive">hey there i am using kepler!!!.hey there i am using kepler!!!.hey there i am using kepler!!!.</p>
-						&nbsp;
 						<i class="fa fa-quote-right"></i>	
 					</div>
 				</div>
@@ -329,7 +318,7 @@
 							  <div class="p-2">
 								<span class="badge badge-primary badge-pill theme_color"><i class="fa fa-transgender-alt icons" data-toggle="tooltip" data-placement="left" title="Gender"></i></span>
 							  </div>
-							  <div class="p-2">Female</div>
+							  <div class="p-2">Male</div>
 						</li>
 						<li class="profile-details d-flex justify-content-start">
 							  <div class="p-2">
@@ -376,7 +365,8 @@
 					<!--/.Card content-->
 					<!--Card image-->
 					<div class="view overlay">
-						<img src="img/img-7.jpg" class="img-fluid" alt="">
+						<img id="postImg" src="img/img-7.jpg" class="img-fluid img-responsive" alt="">
+						<!-- <img id="myImg" src="img/anand dp.jpg" class="rounded-circle img-responsive"> -->
 					</div>	
 					<div class="card-block-activity">
 						<div class="activity">
@@ -626,12 +616,7 @@
 					  <div id="caption"></div>
 					</div>
 	
-	
-	
-	
-	
-	
-	    <!-- SCRIPTS -->
+ <!-- SCRIPTS -->
 
     <!-- JQuery -->
  <script type="text/javascript" src="js/compiled.min324d.js"></script>
@@ -782,9 +767,15 @@ if ( typeof define === 'function' && define.amd ) {
 var modal = document.getElementById('myModal');
 
 var img = document.getElementById('myImg');
+var post_img = document.getElementById('postImg');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+post_img.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
