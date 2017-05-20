@@ -33,6 +33,25 @@
 		border-bottom:none !important;
 		margin:0 10px;
 		}
+.upload_img{
+			width:100% !important;
+			}
+.custom-file-upload {
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.none{
+	display:none !important;
+}
+.textarea_post{
+				border:none !important;
+				max-height:100%;
+				}			
+.textarea_post:focus{
+				border:none !important;
+				}			
+
 .liker_list{
 		height:55px;
 		}	
@@ -127,7 +146,7 @@
 .media_type{
 		padding:0 10px;
 		}	
-.textarea_post{
+.textarea_post_ot{
 		border:1px solid rgba(146, 159, 186, 0.16);
 		max-height:48px;
 		}
