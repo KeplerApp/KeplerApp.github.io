@@ -22,6 +22,7 @@
 
     <!-- Material Design Bootstrap -->
     <link href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.3.2" rel="stylesheet">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
 	<!-- <link href="css/compiled.min.css" rel="stylesheet">
     <link href="css/mdb.min.css" rel="stylesheet">
@@ -309,7 +310,7 @@
 					</div>
 					<div class="col-xs-10">	
 						<a data-toggle="modal" data-target="#postmodal">
-							<textarea placeholder="what's happening?" class="textarea_post" ></textarea>
+							<textarea placeholder="what's happening?" class="textarea_post_ot" ></textarea>
 						</a>		
 					</div>
 			   </div>
@@ -394,8 +395,7 @@
 											<hr>
 										</div>
 									</div> 
-								
-							</div>	
+								</div>	
 					<!--/.Card image-->
 				  </div>
 				  
@@ -550,12 +550,10 @@
 											<hr>
 										</div>
 									</div> 
-								
-							</div>	
+								</div>	
 					<!--/.Card image-->
 				  </div>
-				  
-				</div>
+				 </div>
 				<div class="col-md-4 col-sm-4 col-xs-4 mobile_view">
 					<div class="card card-cascade">
 						<!--Avatar-->
@@ -582,7 +580,7 @@
 										<i class="fa fa-plus" data-toggle="tooltip" data-placement="right" title="Follow"></i>
 									</button>
 								 </div>
-							</li>
+							  </li>
 							</ul>
 						</div>
 					</div>
@@ -622,14 +620,25 @@
         <div class="modal-content" style="margin-top:20%;">
             <!--Header-->
             <div class="modal-header">
-                <div class="col-xs-2">	
+                <div class="col-xs-2" style="margin-bottom:auto;">	
 					<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;">	
 				</div>
 				<div class="col-md-10 col-sm-10 col-xs-10">	
-					<textarea rows="6" cols="90" placeholder="what's happening?" style="height:100px;max-height:100px;" 
-					length="40" maxlength="40"></textarea>
-						<a><i class="fa fa-camera media_type"></i></a>
-						<a><i class="fa fa-map-marker media_type"></i></a>
+				<div class="md-form">
+					<textarea rows="1" type="text" id="form7" placeholder="Share something!!!" class="md-textarea"></textarea>
+					<label for="form7"></label>
+				</div>
+				</br>
+				</br>
+					<img id="blah" src="img/Preview-icon.png" class="upload_img" />
+						</br>
+						</br>
+						<a class="btn-floating btn-small red"><i class="fa fa-camera media_type"></i></a>
+						<label for="file-upload" class="custom-file-upload btn-floating btn-small green">
+							<i class="fa fa-photo media_type" style="margin:0 0 0 -11px"></i>
+						</label>	
+						<input id="file-upload" type='file' onchange="readURL(this);" accept="image/*" class="none">
+						<a class="btn-floating btn-small blue"><i class="fa fa-map-marker media_type"></i></a>
 						<button type="button" class="theme_color btn_post right"><i class="fa fa-pencil-square-o"></i><span style="padding: 0px 11px;">Post</span></button>
 					</div>
 				</div>				
@@ -745,8 +754,7 @@
     <script type="text/javascript" src="js/compiled.min324d.js"></script>
 	<script type='text/javascript' src='https://mdbootstrap.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 
-
-	<script type="text/javascript" src="js/bootstrap.js"></script>	
+	
 	<script src="js/jqueryb8ff.js"></script> 
 	<script type='text/javascript' src='https://mdbootstrap.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 	<script src="js/ajax-auth-script.js"></script> 
@@ -799,6 +807,20 @@
     $('.mdb-autocomplete').mdb_autocomplete({
         data: users
     });
+	
+	function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+						.height(200)
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+       }
     </script>
 </body>
 
