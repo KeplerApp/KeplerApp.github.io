@@ -21,12 +21,9 @@
 
     <!-- Material Design Bootstrap -->
     <link href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css?ver=4.3.2" rel="stylesheet">
-
-	<!-- <link href="css/compiled.min.css" rel="stylesheet">
-    <link href="css/mdb.min.css" rel="stylesheet">
-     -->
-    <!-- Your custom styles (optional) -->
+	<!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <style>
 	.modal-backdrop{
 	opacity:0.1;
@@ -45,7 +42,6 @@
 		rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
 	padding: 12px 16px;
 }
-
 </style>
 </head>
 
@@ -152,7 +148,27 @@
 	<button type="button" class="btn-primary btn_post right"><i class="fa fa-share-square-o"></i><span style="padding: 0px 11px;">Share</span></button>
 
 </form>	
- <header>
+<form ng-app="app" ng-controller="Ctrl" id="editdp" class="ajax-auth modal_responsive_width">
+             <div class="md-form">
+			  <div class="cropArea">
+				<img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+			  </div>
+			  </br>
+			  <div class="center">Cropped Image:</div>
+			  <div class="center">
+				<img ng-src="{{myCroppedImage}}" />
+			  </div>
+						</br>
+						</br>
+						<label for="fileInput" class="custom-file-upload btn-floating btn-small green pointer">
+							<i class="fa fa-photo media_type" style="margin:0 0 0 -11px"></i>
+						</label>	
+						<input id="fileInput" type='file' onchange="readURL(this);" accept="image/*" class="none" />
+						<button type="button" class="theme_color btn_post right"><span style="padding: 0px 11px;">Save</span></button>
+				</div>				
+</form>
+
+<header>
         <!-- Sidebar navigation -->
         <ul id="slide-out" class="side-nav fixed sn-bg-1 custom-scrollbar">
             <!-- Dp -->
@@ -258,7 +274,7 @@
 			  <div class="col-md-12 col-xs-12 user_wall">
  				<div class="card-background testimonial-card " style="margin-top:185px;">
 					<div class="avatar">
-						<img id="myImg" src="img/anand dp.jpg" class="rounded-circle img-responsive">
+						<img id="myImg" src="img/anand dp.jpg" class="rounded-circle img-responsive" alt="Anand prakash gautam">
 					</div>
 					<div class="card_block">
 					<!--Name-->
@@ -272,13 +288,18 @@
 				</div>
 				<div class="d-flex justify-content-end">
 				  <div class="mr-auto p-2">
-					<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="Bottom" title="Edit"><i class="fa fa-pencil"></i></button>
+					<button type="button" class="btn_shl btn-default" data-toggle="tooltip" data-placement="Bottom" title="Change DP"><a href="#" id="show_edit"><img src="img/user.png"></a></button>
 				  </div>
 				  <div class="p-2">
-					<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="Bottom" title="Edit"><i class="fa fa-pencil"></i></button>
+					<button type="button" class="btn_shl btn-default" data-toggle="tooltip" data-placement="Bottom" title="Edit"><i class="fa fa-pencil"></i></button>
 				  </div>
 				  <div class="p-2">
-					<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="Bottom" title="Edit"><i class="fa fa-pencil"></i></button>
+					<button type="button" class="btn_shl btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></button>
+					 <div class="dropdown-menu dropdown-menu-right">
+							<a class="dropdown-item waves-effect waves-light" href="#"><i class="fa fa-pencil"></i> Edit</a>
+							<a class="dropdown-item waves-effect waves-light" href="#"><i class="fa fa-pencil"></i> Edit</a>
+							<a class="dropdown-item waves-effect waves-light" href="#"><i class="fa fa-pencil"></i> Edit</a>
+					</div>
 				  </div>
 			</div>	
 			</div>	
@@ -294,7 +315,7 @@
 					<a class="nav-link" data-toggle="tab" href="#panel3" role="tab"><span class="hidden-sm-down"><i class="fa fa-check"></i></span> Following</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" data-toggle="tab" href="#panel4" role="tab"><span class="hidden-sm-down"><i class="fa fa-save"></i></span> Saved Post</a>
+					<a class="nav-link" data-toggle="tab" href="#panel4" role="tab"><span class="hidden-sm-down"><i class="fa fa-save"></i></span> SavedPost</a>
 				</li>
 		</ul>
 		<!-- Tab panels -->
@@ -350,15 +371,12 @@
 					<!--Card content-->
 					<div class="card-block">
 						<!--Title-->
-						<div class="col-xs-2">
 							<img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;float:left;" class="reponsive_width">
-						</div>
-						<div class="col-xs-10">
+							&nbsp;
 							<a href="#" class="card-title profile_name">Anand Prakash Gautam</a>
 							<span class="timespan">4hrs ago</span><span class="point">.</span><span class="timespan">Delhi</span>
 							<a data-toggle="modal" data-target="#frameModalBottom" class="btn-floating toggle-action right"><i class="fa fa-chevron-down black-text toggle_icon"></i></a>
 							<br/></br>
-						</div>
 						<!--Text-->
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 					</div>
@@ -489,7 +507,8 @@
 							  <img src="img/spider.jpg" style="height:50px;width:50px;border-radius: 27px;" class="img-width">
 							</div>
 								 <div class="col-md-9 col-sm-9 col-xs-9">	
-									<a href="profile.html" class="card-title profile_name">Anand Prakash Gautam</a>		
+									<a href="profile.html" class="card-title profile_name">Anand Prakash Gautam</a>	
+									<p class="timespan">Followed by<span class="point">.</span><span class="timespan">200</span>		
 									<button class="theme_color btn_post right">
 										<i class="fa fa-plus" data-toggle="tooltip" data-placement="right" title="Follow"></i>
 									</button>
@@ -622,16 +641,12 @@
  <script type="text/javascript" src="js/compiled.min324d.js"></script>
 	<script type='text/javascript' src='https://mdbootstrap.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 
-
-	<script type="text/javascript" src="js/bootstrap.js"></script>	
 	<script src="js/jqueryb8ff.js"></script> 
 	<script type='text/javascript' src='https://mdbootstrap.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
 	<script src="js/ajax-auth-script.js"></script> 
 	<script type="text/javascript" src="js/tweetie.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-	
-	
 	
 	<script>
 	$(function () {
@@ -651,8 +666,7 @@
 		"Anand",
 		"Ujjwal"
     ];
-
-    $('.mdb-autocomplete').mdb_autocomplete({
+	$('.mdb-autocomplete').mdb_autocomplete({
         data: users
     });
 	
@@ -780,7 +794,6 @@ post_img.onclick = function(){
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 }
-
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("closed")[0];
 
@@ -788,7 +801,41 @@ var span = document.getElementsByClassName("closed")[0];
 span.onclick = function() { 
     modal.style.display = "none";
 }   
-    </script>
 
+ function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
 
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+						.height(200)
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+       }
+</script>
+<script>
+	<!-- cropping image -->
+angular.module('app', ['ngImgCrop'])
+.controller('Ctrl', function($scope) {
+    $scope.myImage='';
+    $scope.myCroppedImage='';
+
+    var handleFileSelect=function(evt) {
+      var file=evt.currentTarget.files[0];
+      var reader = new FileReader();
+      reader.onload = function (evt) {
+        $scope.$apply(function($scope){
+          $scope.myImage=evt.target.result;
+        });
+      };
+      reader.readAsDataURL(file);
+    };
+    angular.element(document.querySelector('#fileInput')).on('change',handleFileSelect);
+  });
+
+</script>
+<script src="js/cropping-image.js"></script>
 </body>
