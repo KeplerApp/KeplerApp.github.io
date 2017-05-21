@@ -35,7 +35,14 @@
 		}
 .upload_img{
 			width:100% !important;
-			}
+		}
+.cropArea {
+  background: #E4E4E4;
+  overflow: hidden;
+  width:100%;
+  height:250px;
+}
+		
 .custom-file-upload {
     display: inline-block;
     padding: 6px 12px;
@@ -51,7 +58,16 @@
 .textarea_post:focus{
 				border:none !important;
 				}			
-
+.btn_shl{
+		font-size: .8rem;
+		padding: .60rem 1rem;
+		border-radius: 2px;
+		border: 0;
+		color: #fff!important;
+		margin: 6px;
+		white-space: normal!important;
+		word-wrap: break-word;
+		}
 .liker_list{
 		height:55px;
 		}	
@@ -129,7 +145,7 @@
 .fixed-top{
 			position: fixed;
 			width: 100%;
-	}	
+		}	
 .top{
 		margin-top:8%;
 	}
@@ -254,7 +270,9 @@ body{
 			background:rgba(0, 0, 0, 0.44);
 			padding:initial;
 			}	
-			
+.pointer{
+		cursor:pointer;
+		}
 		
 /* .justify-content-between {
     -webkit-box-pack: justify!important;
@@ -438,3 +456,19 @@ body{
         width: 60%;
     }
 }
+
+img-crop{
+		width:100% ;
+		height:100%;
+		display:block;
+		position:relative;
+		overflow:hidden;
+		}
+img-crop canvas{
+			display:block;
+			position:absolute;
+			top:50%;
+			left:50%;
+			outline:0;
+			-webkit-tap-highlight-color:transparent;
+			}
