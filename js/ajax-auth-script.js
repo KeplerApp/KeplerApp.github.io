@@ -14,20 +14,22 @@ jQuery(document).ready(function($) {
     });
     // Close popup
     $(document).on('click', '.login_overlay, .close', function() {
-        $('form#login, form#liker').fadeOut(500, function() {
+        $('form#login, form#liker, form#editdp').fadeOut(500, function() {
             $('.login_overlay').remove();
         });
         return false;
     });
 
     // Show the share popup on click
-    $('#show_login, #show_liker').on('click', function(e) {
+    $('#show_login, #show_liker, #show_edit').on('click', function(e) {
         $('body').prepend('<div class="login_overlay"></div>');
         if ($(this).attr('id') == 'show_login')
             $('form#login').fadeIn(500);
         else if($(this).attr('id') == 'show_liker')
             $('form#liker').fadeIn(500);
-        e.preventDefault();
+        else if($(this).attr('id') == 'show_edit')
+            $('form#editdp').fadeIn(500);
+		e.preventDefault();
     });
 	
 	// Perform AJAX login/register on form submit
